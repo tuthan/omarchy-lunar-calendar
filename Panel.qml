@@ -117,6 +117,7 @@ Panel {
       }
 
       Flickable {
+        id: calendarScroll
         anchors.fill: parent
         contentWidth: calendarColumn.width
         contentHeight: calendarColumn.implicitHeight
@@ -125,7 +126,7 @@ Panel {
 
         Column {
           id: calendarColumn
-          width: Math.max(parent.width, 360)
+          width: Math.max(calendarScroll.width, 360)
           spacing: Style.space(8)
 
           // --- Hero Header ---
