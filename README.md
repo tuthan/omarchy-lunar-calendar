@@ -23,16 +23,6 @@ Inspired by `archlatam/omarchy-calendar-activity`, this plugin brings East Asian
 
 ## Installation & Setup
 
-### Interactive Installer (Recommended)
-
-Run the interactive installer script which prompts you for your preferred bar location:
-
-```bash
-git clone git@github.com:tuthan/omarchy-lunar-calendar.git
-cd omarchy-lunar-calendar
-./install.sh
-```
-
 ### Manual Installation via Omarchy CLI
 
 ```bash
