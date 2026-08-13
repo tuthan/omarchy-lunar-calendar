@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "omarchy-lunar-calendar",
+  "name": "Lunar Calendar",
+  "version": "1.0.0",
+  "author": "Antigravity & User",
+  "license": "MIT",
+  "description": "East Asian Lunar Calendar (Lịch Âm / 农历), Moon Phase indicator, and Activity Manager for Omarchy Quattro",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Lunar Calendar",
+    "description": "East Asian Lunar Calendar, Moon Phase indicator, and Activity Manager",
+    "category": "Time",
+    "allowMultiple": false,
+    "defaultSection": "center"
+  }
+}
