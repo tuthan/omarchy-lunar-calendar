@@ -3,7 +3,7 @@ set -e
 
 PLUGIN_ID="omarchy-lunar-calendar"
 PLUGIN_DIR="$HOME/.config/omarchy/plugins/$PLUGIN_ID"
-REPO_URL="git@github.com:tuthan/omarchy-lunar-calendar.git"
+REPO_URL="https://github.com/tuthan/omarchy-lunar-calendar.git"
 
 echo "=================================================="
 echo " 🌕 Omarchy Lunar Calendar Plugin Setup / Installer "

@@ -37,10 +37,10 @@ cd omarchy-lunar-calendar
 
 ```bash
 # 1. Add and enable plugin
-omarchy plugin add git@github.com:tuthan/omarchy-lunar-calendar.git --enable
+omarchy plugin add https://github.com/tuthan/omarchy-lunar-calendar.git --yes
 
-# 2. Place widget on bar (choose your location)
-omarchy bar put omarchy-lunar-calendar --after omarchy.clock
+# 2. Enable and place the widget after the clock
+omarchy plugin enable omarchy-lunar-calendar --after omarchy.clock
 
 # 3. Restart shell
 omarchy restart shell
