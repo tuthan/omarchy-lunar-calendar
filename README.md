@@ -36,13 +36,20 @@ cd omarchy-lunar-calendar
 ### Manual Installation via Omarchy CLI
 
 ```bash
-# 1. Add and enable plugin
-omarchy plugin add https://github.com/tuthan/omarchy-lunar-calendar.git --yes
+# 1. Add and enable plugin interactively
+omarchy plugin add https://github.com/tuthan/omarchy-lunar-calendar.git --enable
 
-# 2. Enable and place the widget after the clock
+# 2. Choose `center` when Omarchy asks where to place the widget
+# 3. Restart shell if the bar does not refresh automatically
+omarchy restart shell
+```
+
+For non-interactive installation, use:
+
+```bash
+omarchy plugin add https://github.com/tuthan/omarchy-lunar-calendar.git --yes
 omarchy plugin enable omarchy-lunar-calendar --after omarchy.clock
 
-# 3. Restart shell
 omarchy restart shell
 ```
 
