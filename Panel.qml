@@ -96,7 +96,7 @@ Panel {
     owner: panelRoot.barIdentity
     bar: panelRoot.bar
     open: panelRoot.opened
-    centerOnBar: true
+    centerOnBar: false
     focusTarget: keyCatcher
     contentWidth: panel.fittedContentWidth(Style.space(440))
     contentHeight: panel.fittedContentHeight(calendarColumn.implicitHeight)
