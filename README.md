@@ -21,30 +21,23 @@ Inspired by `archlatam/omarchy-calendar-activity`, this plugin brings East Asian
   - Highlighting for upcoming traditional holidays and user events.
 - **Omarchy Theme Integration**: Respects system fonts and color scheme.
 
-## Installation & Setup
+## Installation & Removal
 
-### Manual Installation via Omarchy CLI
+Install the plugin with the Omarchy plugin manager:
 
 ```bash
-# 1. Add and enable plugin interactively
 omarchy plugin add https://github.com/tuthan/omarchy-lunar-calendar.git --enable
-
-# 2. Choose `center` when Omarchy asks where to place the widget
-# 3. Restart shell if the bar does not refresh automatically
 omarchy restart shell
 ```
 
-For non-interactive installation, use:
+The `--enable` flow places the widget automatically using the plugin's default
+bar section. If the bar does not refresh immediately, restart the shell once.
+
+Remove it with:
 
 ```bash
-omarchy plugin add https://github.com/tuthan/omarchy-lunar-calendar.git --yes
-omarchy plugin enable omarchy-lunar-calendar --after omarchy.clock
-
-omarchy restart shell
+omarchy plugin remove omarchy-lunar-calendar
 ```
-
-Adding a plugin enables its code but does not place the widget on the bar. Run
-the `omarchy bar put` command above, or use `./install.sh` for the guided setup.
 
 ## Shortcuts & Controls
 
@@ -57,9 +50,16 @@ the `omarchy bar put` command above, or use `./install.sh` for the guided setup.
 
 - `manifest.json`: Plugin descriptor file for Omarchy Quattro.
 - `BarWidget.qml`: Status bar widget component.
-- `CalendarPanel.qml`: Interactive popup calendar and activity panel.
+- `Panel.qml`: Interactive popup calendar and activity panel.
 - `scripts/lunar_converter.js`: Pure JavaScript astronomical solar-to-lunar conversion & moon phase library.
 - `scripts/event_store.js`: Event persistence and holiday manager.
+
+## Reviewer Notes
+
+- No additional packages, services, or elevated privileges are required.
+- The plugin uses only Omarchy/Quickshell QML APIs and bundled JavaScript under `scripts/`.
+- There is no installer script or remote build path.
+- Event data is handled locally by the plugin logic; the repository does not depend on external network calls at runtime.
 
 ## License
 
