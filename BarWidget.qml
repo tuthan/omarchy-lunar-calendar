@@ -7,7 +7,7 @@ import "scripts/lunar_converter.js" as LunarConverter
 
 BarWidget {
     id: root
-    moduleName: "omarchy-lunar-calendar"
+    moduleName: "io.github.tuthan.omarchy-lunar-calendar"
 
     property date currentDate: new Date()
     property var lunarData: ({})
@@ -92,11 +92,11 @@ BarWidget {
             }
         }
         onStatusChanged: if (status === Loader.Error)
-            console.warn("omarchy-lunar-calendar panel failed to load:", errorString())
+            console.warn("io.github.tuthan.omarchy-lunar-calendar panel failed to load:", errorString())
     }
 
     IpcHandler {
-        target: "omarchy-lunar-calendar"
+        target: "io.github.tuthan.omarchy-lunar-calendar"
         function refresh(): void { root.refresh() }
         function open(): void { root.open() }
         function close(): void { root.close() }

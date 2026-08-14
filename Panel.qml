@@ -8,8 +8,8 @@ import "scripts/event_store.js" as EventStore
 
 Panel {
   id: panelRoot
-  moduleName: "omarchy-lunar-calendar"
-  ipcTarget: "omarchy-lunar-calendar"
+  moduleName: "io.github.tuthan.omarchy-lunar-calendar"
+  ipcTarget: "io.github.tuthan.omarchy-lunar-calendar"
   manageIpc: false
 
   property var anchorItem: null

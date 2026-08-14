@@ -36,7 +36,7 @@ bar section. If the bar does not refresh immediately, restart the shell once.
 Remove it with:
 
 ```bash
-omarchy plugin remove omarchy-lunar-calendar
+omarchy plugin remove io.github.tuthan.omarchy-lunar-calendar
 ```
 
 ## Shortcuts & Controls
