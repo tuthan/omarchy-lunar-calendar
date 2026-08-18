@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "io.github.tuthan.omarchy-lunar-calendar",
   "name": "Lunar Calendar",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "author": "Hung Vo",
   "license": "MIT",
   "description": "East Asian Lunar Calendar (Lịch Âm / 农历), Moon Phase indicator, and Activity Manager for Omarchy Quattro",

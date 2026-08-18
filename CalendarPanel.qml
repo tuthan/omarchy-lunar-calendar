@@ -274,8 +274,13 @@ Item {
                         implicitWidth: 50
                         implicitHeight: 56
                         radius: 6
-                        visible: model.isCurrentMonth
-                        color: model.isSelected ? "#2563eb" : (model.isToday ? "#1e3a8a" : (cellMouse.containsMouse ? "#334155" : "#1e293b"))
+                        // Keep leading blank cells in the GridLayout so dates
+                        // retain their correct weekday column. Invisible
+                        // children are skipped by Qt positioners.
+                        visible: true
+                        color: model.isCurrentMonth
+                            ? (model.isSelected ? "#2563eb" : (model.isToday ? "#1e3a8a" : (cellMouse.containsMouse ? "#334155" : "#1e293b")))
+                            : "transparent"
                         border.color: model.isSpecial ? "#f59e0b" : "transparent"
                         border.width: model.isSpecial ? 1 : 0
 

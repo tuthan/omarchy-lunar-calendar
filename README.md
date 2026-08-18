@@ -39,6 +39,22 @@ Remove it with:
 omarchy plugin remove io.github.tuthan.omarchy-lunar-calendar
 ```
 
+### Updating
+
+Update this plugin to the latest version from GitHub with:
+
+```bash
+omarchy plugin update io.github.tuthan.omarchy-lunar-calendar --yes
+omarchy restart shell
+```
+
+To update every Git-managed Omarchy plugin instead:
+
+```bash
+omarchy plugin update --yes
+omarchy restart shell
+```
+
 ## Shortcuts & Controls
 
 - **Left / Right Arrows (`◄` `►`)**: Navigate months.

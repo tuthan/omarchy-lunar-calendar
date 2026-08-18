@@ -246,7 +246,10 @@ Panel {
                 width: Math.floor((calendarColumn.width - Style.space(12)) / 7)
                 height: Style.space(54)
                 radius: Style.cornerRadius
-                visible: modelData.inMonth
+                // Keep leading blank cells in the Grid so dates retain their
+                // correct weekday column. Invisible children are skipped by
+                // Qt positioners and would shift the whole month left.
+                visible: true
                 color: modelData.isSel
                   ? Style.selectedStateColor(panelRoot.contentForeground, Color.accent)
                   : (gridMouse.containsMouse
