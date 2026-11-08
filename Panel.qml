@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 import Quickshell
 import qs.Commons
+import qs.Commons as Commons
 import qs.Ui
 import "scripts/lunar_converter.js" as LunarConverter
 import "scripts/event_store.js" as EventStore
@@ -31,7 +32,7 @@ Panel {
     panelRoot.updateSelectedDayInfo()
   }
 
-  readonly property color contentForeground: bar ? bar.foreground : Color.foreground
+  readonly property color contentForeground: bar ? bar.foreground : Commons.Color.foreground
   readonly property string contentFontFamily: bar ? bar.fontFamily : Style.font.family
 
   function open() {
@@ -175,7 +176,7 @@ Panel {
                 font.family: panelRoot.contentFontFamily
                 font.pixelSize: Style.font.bodySmall
                 font.bold: true
-                color: Style.selectedStateColor(panelRoot.contentForeground, Color.accent)
+                color: Style.selectedStateColor(panelRoot.contentForeground, Commons.Color.accent)
               }
               Text { text: "·"; color: Qt.darker(panelRoot.contentForeground, 1.8); font.pixelSize: Style.font.bodySmall }
               Text {
@@ -251,13 +252,13 @@ Panel {
                 // Qt positioners and would shift the whole month left.
                 visible: true
                 color: modelData.isSel
-                  ? Style.selectedStateColor(panelRoot.contentForeground, Color.accent)
+                  ? Style.selectedStateColor(panelRoot.contentForeground, Commons.Color.accent)
                   : (gridMouse.containsMouse
-                    ? Style.hoverFillFor(panelRoot.contentForeground, Color.accent)
+                    ? Style.hoverFillFor(panelRoot.contentForeground, Commons.Color.accent)
                     : "transparent")
                 border.width: modelData.isTod ? Style.spacing.hairline : (modelData.isSpec ? 1 : 0)
                 border.color: modelData.isTod
-                  ? Style.normalBorderFor(panelRoot.contentForeground, Color.accent)
+                  ? Style.normalBorderFor(panelRoot.contentForeground, Commons.Color.accent)
                   : (modelData.isSpec ? "#f59e0b" : "transparent")
 
                 Column {
@@ -270,7 +271,7 @@ Panel {
                     font.family: panelRoot.contentFontFamily
                     font.pixelSize: Style.font.body
                     font.bold: Boolean(modelData.isTod || modelData.isSel)
-                    color: modelData.isSel ? Color.popups.background : panelRoot.contentForeground
+                    color: modelData.isSel ? Commons.Color.popups.background : panelRoot.contentForeground
                   }
 
                   Text {
